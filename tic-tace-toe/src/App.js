@@ -15,12 +15,23 @@ export default function Board() {
   let status;
   if(winner){
     status = "Winner: " + winner
-  }else{
+  }else if(squareValues.includes(null)){
     status = "Next player: " + (xIsNext ? "X" : "O");
+  }else{
+    status = "Draw"
   }
   return( 
     <>
-      <div className="status">{status}</div>
+      <div className="container">
+        <div className="status">{status}</div>
+        {(status==="Draw"||winner) && (
+          <button onClick={()=>{
+            setValues(Array(9).fill(null));
+            setXIsNext(true);
+          }}>Reset Board</button>
+        )}
+      </div>
+     
       <div className="board-row">
         <Square value={squareValues[0]} onSquareClick={()=>handleClick(0)}/>
         <Square value={squareValues[1]} onSquareClick={()=>handleClick(1)}/>

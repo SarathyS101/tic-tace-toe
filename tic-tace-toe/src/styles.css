@@ -88,3 +88,15 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.container {
+  display: flex;
+  gap: 20px; /* Adds space between the columns */
+}
+
+.column {
+  flex: 1; /* Ensures both columns take equal width */
+  padding: 20px;
+  background-color: lightgray;
+  text-align: center;
+}
