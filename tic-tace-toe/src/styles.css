@@ -4,10 +4,14 @@
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  margin: 0; 
   padding: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: yellow;
 }
-
 h1 {
   margin-top: 0;
   font-size: 22px;
@@ -46,43 +50,34 @@ ul {
   padding-inline-start: 20px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 .square {
   background: #fff;
   border: 1px solid #999;
-  float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  height: 200px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 200px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
 }
+
 .highlighted-square {
   background: green;
   border: 1px solid #999;
-  float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  height: 200px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.board-row {
+  display: flex; /* Use flexbox to ensure the squares align horizontally */
 }
 
 .board-row:after {
@@ -93,7 +88,9 @@ body {
 
 .status {
   margin-bottom: 10px;
+  margin-right: 20px;
 }
+
 .game {
   display: flex;
   flex-direction: row;
@@ -105,12 +102,8 @@ body {
 
 .container {
   display: flex;
-  gap: 20px; /* Adds space between the columns */
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
-.column {
-  flex: 1; /* Ensures both columns take equal width */
-  padding: 20px;
-  background-color: lightgray;
-  text-align: center;
-}

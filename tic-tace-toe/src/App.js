@@ -31,21 +31,24 @@ export default function Board() {
           }}>Reset Board</button>
         )}
       </div>
-     
-      <div className="board-row">
-        <Square winner={winner} check={0} value={squareValues[0]} onSquareClick={()=>handleClick(0)}/>
-        <Square winner={winner} check={1} value={squareValues[1]} onSquareClick={()=>handleClick(1)}/>
-        <Square winner={winner} check={2}value={squareValues[2]} onSquareClick={()=>handleClick(2)}/>
-      </div>
-      <div className="board-row">
-        <Square winner={winner} check={3} value={squareValues[3]} onSquareClick={()=>handleClick(3)}/>
-        <Square winner={winner} check={4} value={squareValues[4]} onSquareClick={()=>handleClick(4)}/>
-        <Square winner={winner} check={5} value={squareValues[5]} onSquareClick={()=>handleClick(5)}/>
-      </div>
-      <div className="board-row">
-        <Square winner={winner} check={6} value={squareValues[6]} onSquareClick={()=>handleClick(6)}/>
-        <Square winner={winner} check={7} value={squareValues[7]} onSquareClick={()=>handleClick(7)}/>
-        <Square winner={winner} check={8} value={squareValues[8]} onSquareClick={()=>handleClick(8)}/>
+      <div className="board-container">
+
+      
+        <div className="board-row">
+          <Square winner={winner} check={0} value={squareValues[0]} onSquareClick={()=>handleClick(0)}/>
+          <Square winner={winner} check={1} value={squareValues[1]} onSquareClick={()=>handleClick(1)}/>
+          <Square winner={winner} check={2}value={squareValues[2]} onSquareClick={()=>handleClick(2)}/>
+        </div>
+        <div className="board-row">
+          <Square winner={winner} check={3} value={squareValues[3]} onSquareClick={()=>handleClick(3)}/>
+          <Square winner={winner} check={4} value={squareValues[4]} onSquareClick={()=>handleClick(4)}/>
+          <Square winner={winner} check={5} value={squareValues[5]} onSquareClick={()=>handleClick(5)}/>
+        </div>
+        <div className="board-row">
+          <Square winner={winner} check={6} value={squareValues[6]} onSquareClick={()=>handleClick(6)}/>
+          <Square winner={winner} check={7} value={squareValues[7]} onSquareClick={()=>handleClick(7)}/>
+          <Square winner={winner} check={8} value={squareValues[8]} onSquareClick={()=>handleClick(8)}/>
+        </div>
       </div>
     </>
   );
